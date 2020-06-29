@@ -1,0 +1,13 @@
+{
+	"name":"Estani",
+	"last_name": "Perez Pena",
+	"birth_date":"1997-02-02",
+	"gender":"M",
+	"document_number":"40392534" ,
+	"email" : "10@gmail.com",
+	"password": "1000",
+	"address":"Av 9 1344",
+	"document_type":"1",
+	"city_id":"1",
+	"medical_speciality":1	
+}

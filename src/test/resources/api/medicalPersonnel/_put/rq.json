@@ -1,0 +1,13 @@
+{
+    "name": "testmedical32",
+    "last_name": "testuser30",
+    "birth_date": "2020-06-15",
+    "gender": "M",
+    "document_type": "1",
+    "document_number": "12345678",
+    "email": "testmedical32@gmail.com",
+    "password": "",
+    "city_id": 651,
+    "address": "holaaaddddd",
+    "medical_speciality":"2"
+}
