@@ -1,15 +1,16 @@
 {
     "id": "",
-    "name": "testmedical32",
-    "last_name": "testuser30",
-    "birth_date": "2020-06-15T00:00:00.000Z",
-    "gender": "M",
+    "name": "Estani",
+    "last_name": "Perez Pena",
+    "birth_date": "1997-02-02T00:00:00.000Z",
+    "gender": null,
     "document_type_id": 1,
-    "document_number": "12345678",
-    "email": "testmedical32@gmail.com",
+    "document_number": "40392534",
+    "email": "skip",
     "password": "",
-    "city_id": 651,
-    "address": "holaaaddddd",
-    "medical_speciality_id": 2,
-    "user_id": ""
+    "city_id": null,
+    "address": null,
+    "medical_speciality_id": 1,
+    "user_id": "",
+    "languages":"skip"
 }
