@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractUIObject;
+import com.solvd.CarinaTesting.gui.pages.NewStudentsPage;
+import com.solvd.CarinaTesting.gui.pages.NotTeachers;
+import com.solvd.CarinaTesting.gui.pages.StudentsPage;
+import com.solvd.CarinaTesting.gui.pages.TeachersPage;
 
 public class HeaderLinks extends AbstractUIObject{
 
@@ -34,31 +38,31 @@ public class HeaderLinks extends AbstractUIObject{
 		super(driver, searchContext);
 	}
 	
-	public void openNewStudentsPage() {
-		newStudentsLink.click();
+	public Boolean checkNewStudentsPage() {
+		return newStudentsLink.clickIfPresent();
 	}
 	
-	public void openStudentsPage() {
-		studentsLink.click();
+	public Boolean checkStudentsPage() {
+		return studentsLink.clickIfPresent();
 	}
 	
-	public void openTeachersPage() {
-		teachersLink.click();
+	public Boolean checkTeachersPage() {
+		return teachersLink.clickIfPresent();
 	}
 	
-	public void openNotTeachersPage() {
-		notTeachersLink.click();
+	public Boolean checkNotTeachersPage() {
+		return notTeachersLink.clickIfPresent();
 	}
 	
-	public void openGradutesPage() {
-		graduatesLink.click();
+	public Boolean checkGradutesPage() {
+		return graduatesLink.clickIfPresent();
 	}
 	
-	public void openSchoolsPage() {
-		schoolsLink.click();
+	public Boolean checkSchoolsPage() {
+		return schoolsLink.clickIfPresent();
 	}
 	
-	public void openEnterprisesPage() {
-		enterprisesLink.click();
+	public Boolean checkEnterprisesPage() {
+		return enterprisesLink.clickIfPresent();
 	}
 }

@@ -6,8 +6,8 @@ import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.solvd.CarinaTesting.api.medicalPersonnelMethods.DeleteMedicalPersonnelMethod;
 import com.solvd.CarinaTesting.api.medicalPersonnelMethods.GetMedicalPersonnelMethod;
+import com.solvd.CarinaTesting.api.medicalPersonnelMethods.ILogin;
 import com.solvd.CarinaTesting.api.medicalPersonnelMethods.PostMedicalPersonnelMethod;
-import com.solvd.CarinaTesting.api.medicalPersonnelMethods.PostSignInMedicalPersonnel;
 import com.solvd.CarinaTesting.api.medicalPersonnelMethods.PutMedicalPersonnelMethod;
 import com.solvd.CarinaTesting.api.phoneNumbersMethods.DeletePhoneNumbersMethod;
 import com.solvd.CarinaTesting.api.phoneNumbersMethods.GetPhoneNumbersMethod;
@@ -18,8 +18,8 @@ import com.solvd.CarinaTesting.api.userLanguageMethods.PostUserLanguageMethod;
 
 import io.restassured.path.json.JsonPath;
 
-public class ApiTest{
-	@Test(description = "Test GET Medical Personnel")
+public class ApiTest implements ILogin{
+	/*@Test(description = "Test GET Medical Personnel")
     @MethodOwner(owner = "Estani")
     public void testGetMedicalPersonnel() {
 
@@ -52,12 +52,7 @@ public class ApiTest{
     @MethodOwner(owner = "Estani")
     public void testGetPhoneNumber() {
 		
-		PostSignInMedicalPersonnel postSignInMethod = new PostSignInMedicalPersonnel();
-		postSignInMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
-        String rsSignIn = postSignInMethod.callAPI().asString();
-        postSignInMethod.validateResponse();
-	
-		String token = JsonPath.from(rsSignIn).getString("token");
+		String token = getToken();
 
 		PostPhoneNumbersMethod postPhoneNumbersMethod = new PostPhoneNumbersMethod();
 		postPhoneNumbersMethod.setHeaders("x-access-token="+token);
@@ -88,12 +83,7 @@ public class ApiTest{
     @MethodOwner(owner = "Estani")
     public void testGetLanguage() {
 
-		PostSignInMedicalPersonnel postSignInMethod = new PostSignInMedicalPersonnel();
-		postSignInMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
-        String rsSignIn = postSignInMethod.callAPI().asString();
-        postSignInMethod.validateResponse();
-	
-		String token = JsonPath.from(rsSignIn).getString("token");
+		String token = getToken();
 
 		PostUserLanguageMethod postUserLanguageMethods = new PostUserLanguageMethod();
 		postUserLanguageMethods.setHeaders("x-access-token="+token);
@@ -108,5 +98,5 @@ public class ApiTest{
 		getUserLanguageMethods.callAPI();
 		getUserLanguageMethods.validateResponse();
 
-    }
+    }*/
 }

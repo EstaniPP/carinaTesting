@@ -2,37 +2,22 @@ package com.solvd.CarinaTesting.gui.pages;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.solvd.CarinaTesting.gui.components.FooterMenu;
-import com.solvd.CarinaTesting.gui.components.FooterPanel;
-import com.solvd.CarinaTesting.gui.components.HeaderButtons;
+import com.solvd.CarinaTesting.gui.components.GeneralComponent;
 import com.solvd.CarinaTesting.gui.components.HeaderLinks;
-import com.solvd.CarinaTesting.gui.components.HeaderLogo;
-import com.solvd.CarinaTesting.gui.components.HeaderSearch;
 
 public class HomePage extends AbstractPage{
-	
-	 @FindBy(xpath = "//div[contains(@class,'header__botonera')]")
-	private HeaderButtons headerButtons;
-	    
-	@FindBy(xpath = "//div[contains(@class,'header__logo')]")
-	private HeaderLogo headerLogo;
-	    
-	@FindBy(xpath = "//div[contains(@class,'header__botonera')]")
-	private HeaderSearch headerSearch;
-	    
-	@FindBy(xpath = "//div[@id=\"views_slideshow_cycle_div_carrousel-block_0\"]")
-	private FooterPanel footerPanel;
-	
-    @FindBy(xpath = "//div[contains(@class,'header__region')]")
-    private HeaderLinks headerLinks; 
-    
+
 	@FindBy(xpath = "//div[contains(@id,'bloque-noticia')]//div[contains(@class, 'views-field-title')]//a")
 	private List<ExtendedWebElement> titlesList; 
+	
+	@FindBy(id = "page")
+	private GeneralComponent generalComponent;
 	
 	@FindBy(xpath = "//div[@id=\"block-menu-block-4\"]/div/ul[contains(@class,'menu')]/li[1]/ul//a")
 	private List<ExtendedWebElement> electionsPages;
@@ -72,15 +57,17 @@ public class HomePage extends AbstractPage{
 	}
 	
 	public HeaderLinks getHeadersPages() {
-		return headerLinks;
+		return generalComponent.getHeaderLinks();
 	}
 	
-	public void selectTitle(String title) {
+	public Boolean selectTitle(String title) {
         for (ExtendedWebElement titlesLink : titlesList) {
             String currentNew = titlesLink.getText();
-            if (title.equals(currentNew)) {
+            if (title.equalsIgnoreCase(currentNew)) {
             	titlesLink.click();
+            	return true;
             }
         }
+        return false;
     }
 }

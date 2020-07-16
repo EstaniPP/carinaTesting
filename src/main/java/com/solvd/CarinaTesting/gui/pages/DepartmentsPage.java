@@ -4,24 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.solvd.CarinaTesting.gui.components.FooterMenu;
-import com.solvd.CarinaTesting.gui.components.FooterPanel;
-import com.solvd.CarinaTesting.gui.components.HeaderButtons;
+import com.solvd.CarinaTesting.gui.components.GeneralComponent;
 import com.solvd.CarinaTesting.gui.components.HeaderLinks;
-import com.solvd.CarinaTesting.gui.components.HeaderLogo;
-import com.solvd.CarinaTesting.gui.components.HeaderSearch;
 
 public class DepartmentsPage  extends AbstractPage{
 
-	private FooterMenu footerMenu;
-	
-	private FooterPanel footerPanel;
-	
-	private HeaderButtons headerButtons;
-	
-	private HeaderSearch headerSearach;
-	
-	private HeaderLogo headerLogo;
+	@FindBy(id = "page")
+	private GeneralComponent generalComponent;
 	
     @FindBy(xpath = "//div[contains(@class,'header__region')]")
     private HeaderLinks headerLinks; 
